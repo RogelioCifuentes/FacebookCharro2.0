@@ -1,4 +1,13 @@
+cl\forge\programatufuruto\facebookcharro\repositories\ComentarioRepository.class
+cl\forge\programatufuruto\facebookcharro\controller\LikesController.class
 cl\forge\programatufuruto\facebookcharro\repositories\UsuarioRepository.class
+cl\forge\programatufuruto\facebookcharro\controller\ComentarioController.class
+cl\forge\programatufuruto\facebookcharro\model\Comentario.class
+cl\forge\programatufuruto\facebookcharro\controller\FotoController.class
+cl\forge\programatufuruto\facebookcharro\model\Foto.class
 cl\forge\programatufuruto\facebookcharro\App.class
 cl\forge\programatufuruto\facebookcharro\model\Usuario.class
 cl\forge\programatufuruto\facebookcharro\controller\UsuarioController.class
+cl\forge\programatufuruto\facebookcharro\repositories\LikesRepository.class
+cl\forge\programatufuruto\facebookcharro\repositories\FotoRepository.class
+cl\forge\programatufuruto\facebookcharro\model\Likes.class
