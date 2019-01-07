@@ -1,0 +1,4 @@
+cl\forge\programatufuruto\facebookcharro\repositories\UsuarioRepository.class
+cl\forge\programatufuruto\facebookcharro\App.class
+cl\forge\programatufuruto\facebookcharro\model\Usuario.class
+cl\forge\programatufuruto\facebookcharro\controller\UsuarioController.class
