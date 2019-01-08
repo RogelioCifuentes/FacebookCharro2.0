@@ -37,10 +37,11 @@ public class FotoController {
         return fotos;
     }
 
-   // @RequestMapping(method = RequestMethod.GET)
-    //public Foto obtenerFotosDeUsuario(Usuario usuario){
+    @RequestMapping(method = RequestMethod.GET)
+    public List<Foto> findByIdUsuario(Usuario usuario){
 
-     //return repository.findById(usuario.getIdUsuario()).get();
+     return repository.findByIdUsuario(usuario.getIdUsuario());
 
-    //}
+
+    }
 }

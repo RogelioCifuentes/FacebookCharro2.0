@@ -19,6 +19,7 @@ public class ComentarioController {
     @Autowired
     private ComentarioRepository repository;
 
+
     @RequestMapping(method = RequestMethod.POST)
     public void setComentario(@RequestBody Comentario comentario){
         repository.save(comentario);
@@ -28,6 +29,7 @@ public class ComentarioController {
     public List<Comentario> getComentarios(){
         List<Comentario> comentarios = new ArrayList<>();
         repository.findAll().forEach(Comentario -> comentarios.add(Comentario));
+
         return comentarios;
     }
 }

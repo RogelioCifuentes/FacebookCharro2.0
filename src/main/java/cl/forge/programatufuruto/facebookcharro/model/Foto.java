@@ -5,6 +5,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@NamedQuery(name = "Foto.findByIdUsuario", query = "select f from Foto where f.idUsuario = ?1")
 @Table(name="foto")
 public class Foto {
 
