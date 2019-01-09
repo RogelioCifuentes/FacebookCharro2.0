@@ -28,6 +28,10 @@ public class Foto {
 
     }
 
+    public Foto(Integer idFoto){
+        this.idFoto = idFoto;
+    }
+
     public Foto(Integer idFoto, String ubicacion, String pieDeFoto, Usuario idUsuario) {
         this.idFoto = idFoto;
         this.ubicacion = ubicacion;

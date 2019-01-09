@@ -2,6 +2,7 @@ package cl.forge.programatufuruto.facebookcharro.services;
 
 
 import cl.forge.programatufuruto.facebookcharro.model.Comentario;
+import cl.forge.programatufuruto.facebookcharro.model.Foto;
 import cl.forge.programatufuruto.facebookcharro.repositories.ComentarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,9 @@ public class ComentarioService {
 
     public Iterable<Comentario> obtenerComentarios(){
         return comentarioRepository.findAll();
+    }
+
+    public Iterable<Comentario> obtenerComentariosFoto(Foto foto){
+        return comentarioRepository.findByIdFoto(foto);
     }
 }

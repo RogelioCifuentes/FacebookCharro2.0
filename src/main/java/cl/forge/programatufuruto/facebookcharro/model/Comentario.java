@@ -23,11 +23,11 @@ public class Comentario implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Date fecha = new Date();
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="idUsuario")
     private Usuario idUsuario;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="idFoto")
     private Foto idFoto;
 

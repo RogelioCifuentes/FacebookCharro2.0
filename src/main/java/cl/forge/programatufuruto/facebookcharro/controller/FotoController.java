@@ -22,10 +22,10 @@ public class FotoController {
         this.service = service;
     }
 
-//    @RequestMapping("/porIdUsuario/{idUsuario}")
-//    public Iterable<Foto> porIdUsuario(@PathVariable(value="idUsuario") Integer id){
-//        return service.porIdUsuario(id);
-//    }
+    @RequestMapping("/porIdUsuario/{idUsuario}")
+    public Iterable<Foto> porIdUsuario(@PathVariable(value="idUsuario") Integer id){
+     return service.porIdUsuario(id);
+   }
 
     @RequestMapping(method = RequestMethod.POST)
     public void setFoto(@RequestBody Foto foto){

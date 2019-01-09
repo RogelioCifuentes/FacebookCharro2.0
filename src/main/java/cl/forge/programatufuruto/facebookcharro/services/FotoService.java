@@ -1,6 +1,7 @@
 package cl.forge.programatufuruto.facebookcharro.services;
 
 import cl.forge.programatufuruto.facebookcharro.model.Foto;
+import cl.forge.programatufuruto.facebookcharro.model.Usuario;
 import cl.forge.programatufuruto.facebookcharro.repositories.FotoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,10 @@ public class FotoService {
     }
     public void save(Foto foto){
         repository.save(foto);
+    }
+
+    public Iterable<Foto> porIdUsuario(Integer id){
+
+        return repository.findByIdUsuario(new Usuario(id));
     }
 }
