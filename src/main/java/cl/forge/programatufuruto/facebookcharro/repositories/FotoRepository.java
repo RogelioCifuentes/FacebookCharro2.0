@@ -12,4 +12,6 @@ import java.util.Optional;
 
 public interface FotoRepository extends CrudRepository<Foto,Integer> {
 
+    List<Foto> findByUsuario(Usuario usuario);
+
 }

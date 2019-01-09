@@ -21,18 +21,18 @@ public class Foto {
 
     @ManyToOne
     @JoinColumn(name="idUsuario")
-    private Usuario idUsuario;
+    private Usuario usuario;
 
 
     public Foto(){
 
     }
 
-    public Foto(Integer idFoto, String ubicacion, String pieDeFoto, Usuario idUsuario) {
+    public Foto(Integer idFoto, String ubicacion, String pieDeFoto, Usuario usuario) {
         this.idFoto = idFoto;
         this.ubicacion = ubicacion;
         this.pieDeFoto = pieDeFoto;
-        this.idUsuario = idUsuario;
+        this.usuario = usuario;
     }
 
     public Integer getIdFoto() {
@@ -60,11 +60,11 @@ public class Foto {
     }
 
     public Usuario getIdUsuario() {
-        return idUsuario;
+        return usuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
 
@@ -74,7 +74,7 @@ public class Foto {
                 "idFoto=" + idFoto +
                 ", ubicacion='" + ubicacion + '\'' +
                 ", pieDeFoto='" + pieDeFoto + '\'' +
-                ", idUsuario=" + idUsuario +
+                ", idUsuario=" + usuario +
                 '}';
     }
 }
