@@ -33,8 +33,16 @@ public class FotoController {
     public List<Foto> obtenerFotos() {
         List<Foto> fotos = new ArrayList<>();
         repository.findAll().forEach(Foto -> fotos.add(Foto));
-
         return fotos;
     }
+
+
+    @RequestMapping(method = RequestMethod.POST,  path = "/usuario")
+    public List<Foto> obtenerFotosPorUsuario( @RequestBody Usuario usuario) {
+        List<Foto> fotos = new ArrayList<>();
+        repository.findByUsuario(usuario).forEach(Foto -> fotos.add(Foto));
+        return fotos;
+    }
+
 
 }
