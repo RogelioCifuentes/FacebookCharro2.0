@@ -12,17 +12,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/users")
+@RequestMapping("/usuarios")
 public class UsuarioController {
 
     @Autowired
     private UsuarioRepository repository;
 
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping("/")
     public List<Usuario> getUsuarios(){
         List<Usuario> usuarios = new ArrayList<>();
-        repository.findAll().forEach( usuario -> usuarios.add( usuario ));
+        repository.findAll().forEach( Usuario -> usuarios.add( Usuario ));
         return usuarios;
     }
 

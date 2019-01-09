@@ -4,6 +4,7 @@ D:\Curso\FacebookCharro2.0\src\main\java\cl\forge\programatufuruto\facebookcharr
 D:\Curso\FacebookCharro2.0\src\main\java\cl\forge\programatufuruto\facebookcharro\controller\UsuarioController.java
 D:\Curso\FacebookCharro2.0\src\main\java\cl\forge\programatufuruto\facebookcharro\repositories\LikesRepository.java
 D:\Curso\FacebookCharro2.0\src\main\java\cl\forge\programatufuruto\facebookcharro\repositories\FotoRepository.java
+D:\Curso\FacebookCharro2.0\src\main\java\cl\forge\programatufuruto\facebookcharro\FotoService.java
 D:\Curso\FacebookCharro2.0\src\main\java\cl\forge\programatufuruto\facebookcharro\model\Comentario.java
 D:\Curso\FacebookCharro2.0\src\main\java\cl\forge\programatufuruto\facebookcharro\repositories\UsuarioRepository.java
 D:\Curso\FacebookCharro2.0\src\main\java\cl\forge\programatufuruto\facebookcharro\controller\ComentarioController.java

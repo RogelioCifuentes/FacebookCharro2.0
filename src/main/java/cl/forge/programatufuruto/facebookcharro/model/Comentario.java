@@ -20,7 +20,8 @@ public class Comentario implements Serializable {
     private String comentario;
 
     @Column(name="fecha")
-    private Date fecha;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Date fecha = new Date();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="idUsuario")
@@ -34,10 +35,9 @@ public class Comentario implements Serializable {
 
     }
 
-    public Comentario(Integer idComentario, String comentario, Date fecha, Usuario idUsuario, Foto idFoto) {
+    public Comentario(Integer idComentario, String comentario, Usuario idUsuario, Foto idFoto) {
         this.idComentario = idComentario;
         this.comentario = comentario;
-        this.fecha = fecha;
         this.idUsuario = idUsuario;
         this.idFoto = idFoto;
     }

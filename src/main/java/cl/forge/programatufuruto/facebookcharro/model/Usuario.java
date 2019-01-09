@@ -8,6 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 @Entity
 @Table(name="usuario")
@@ -30,29 +31,21 @@ public class Usuario implements Serializable {
     private String password;
 
     @Column (name ="HORA_CONEXION")
-    private String horaConexion;
-
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Date horaConexion = new Date();
 
 
     public Usuario(){
 
     }
 
-    public Usuario(int idUsuario, String email, String nombre, String password ) {
+    public Usuario(String email, String nombre, String password ) {
 
         try {
-            this.idUsuario = idUsuario;
+            //this.idUsuario = idUsuario;
             this.email = email;
             this.nombre = nombre;
             this.password = encriptar(password);
-
-
-            /* SE LE SETEA LA HORA A LA CUAL INGRESA*/
-            DateTimeFormatter format = DateTimeFormatter.ofPattern("YYYY-MM-DD HH:MM:ss"); //No guarda el HH:MM:ss
-            LocalDateTime horaIngreso = LocalDateTime.now();
-            this.horaConexion = horaIngreso.format(format);
-
 
         }catch (NoSuchAlgorithmException e){
             e.printStackTrace();
@@ -75,11 +68,11 @@ public class Usuario implements Serializable {
     }
 
 
-    public String getHoraConexion() {
+    public Date getHoraConexion() {
         return horaConexion;
     }
 
-    public void setHoraConexion(String horaConexion) {
+    public void setHoraConexion(Date horaConexion) {
         this.horaConexion = horaConexion;
     }
 
