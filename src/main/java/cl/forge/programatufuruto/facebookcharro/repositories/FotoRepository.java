@@ -12,9 +12,4 @@ import java.util.Optional;
 
 public interface FotoRepository extends CrudRepository<Foto,Integer> {
 
-
-    List<Foto> findByIdUsuario(Integer idUsuario);
-
-    //@Query("SELECT * FROM foto WHERE foto.id_usuario = :id_usuario")
-    //public List<Foto> obtenerFotosPorIdUsuario(@Param("id_usuario")Usuario usuario);
 }
