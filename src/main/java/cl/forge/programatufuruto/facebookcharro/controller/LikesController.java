@@ -4,7 +4,6 @@ package cl.forge.programatufuruto.facebookcharro.controller;
 import cl.forge.programatufuruto.facebookcharro.model.Foto;
 import cl.forge.programatufuruto.facebookcharro.model.Likes;
 import cl.forge.programatufuruto.facebookcharro.repositories.LikesRepository;
-import cl.forge.programatufuruto.facebookcharro.services.FotoService;
 import cl.forge.programatufuruto.facebookcharro.services.LikesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

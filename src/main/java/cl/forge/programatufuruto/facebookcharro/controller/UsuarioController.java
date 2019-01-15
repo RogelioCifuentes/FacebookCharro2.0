@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import java.security.NoSuchAlgorithmException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,12 @@ public class UsuarioController {
 
     @RequestMapping(method = RequestMethod.POST)
     public void setUsuario( @RequestBody Usuario usuario){
-        repository.save(usuario);
+        try {
+            usuario.setPassword(usuario.encriptar(usuario.getPassword()));
+            System.out.println(usuario.getPassword());
+            repository.save(usuario);
+        } catch (NoSuchAlgorithmException e) {
+            System.out.println(e);
+        }
     }
 }
